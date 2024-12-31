@@ -28,6 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
     table.appendChild(row);
   });
 
-  // Append the table to the body or a specific container
-  document.body.appendChild(table);
+  // Append the table to the header
+  const header = document.querySelector('header');
+  if (header) {
+    header.appendChild(table);
+  } else {
+    console.warn('No <header> element found in the document.');
+  }
 });
