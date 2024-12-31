@@ -1,14 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const span = document.createElement('span');
-  span.textContent = "Hello, this is a test span inside the header!";
-  span.style.color = "blue";
-  span.style.fontWeight = "bold";
-
-  // Append the span to the header
-  const header = document.querySelector('#content-header');
-  if (header) {
-    header.appendChild(span);
-  } else {
-    console.warn('No <header> element found in the document.');
-  }
-});
+var html = [];
+html.push('<h1>This is a title</h1>');
+html.push('<p>So then she said, thats not a monkey, its a truck!</p>');
+html.push('<p>You shoulda seen his face...</p>');
+var target = document.getElementById('content-header');
+target.innerHTML = html.join('');
+target.style.display = 'block';
